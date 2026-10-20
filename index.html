@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fontoura Planejamento — Daniel Fontoura</title>
+<title>Daniel Fontoura — Territorial Planning & Research</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz@9..144,wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -101,7 +101,7 @@
     transition:opacity .25s ease;
   }
   .page.active{opacity:1; visibility:visible; pointer-events:auto;}
-  .page-inner{max-width:var(--maxw); margin:0 auto; padding:40px 28px 80px;}
+  .page-inner{max-width:var(--maxw); margin:0 auto; padding:40px 28px 56px;}
 
   .eyebrow{
     display:inline-flex; align-items:center; gap:8px;
@@ -139,10 +139,36 @@
     background:linear-gradient(135deg, var(--accent), var(--accent-2));
     opacity:0.28; filter:blur(16px);
   }
-  .photo-frame img{
-    position:relative; width:100%; aspect-ratio:1/1.15; object-fit:cover;
-    border-radius:20px; border:1px solid var(--line);
+  /* CARROSSEL — as fotos ficam empilhadas e a ativa aparece por cima */
+  .carousel{
+    position:relative; width:100%; aspect-ratio:1/1.15; overflow:hidden;
+    border-radius:20px; border:1px solid var(--line); background:var(--bg-soft);
   }
+  .carousel img{
+    position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+    opacity:0; transition:opacity .7s ease;
+  }
+  .carousel img.active{opacity:1;}
+  .car-arrow{
+    position:absolute; top:50%; transform:translateY(-50%); z-index:2;
+    width:34px; height:34px; border-radius:50%; border:none; cursor:pointer;
+    background:rgba(255,253,250,0.85); color:var(--ink); font-size:1.1rem; line-height:1;
+    display:flex; align-items:center; justify-content:center;
+    opacity:0; transition:opacity .2s;
+  }
+  .car-arrow.prev{left:10px;} .car-arrow.next{right:10px;}
+  .carousel:hover .car-arrow, .car-arrow:focus-visible{opacity:1;}
+  @media (hover:none){ .car-arrow{opacity:1;} }
+  .car-dots{position:relative; display:flex; justify-content:center; gap:7px; margin-top:14px;}
+  .car-dots:empty{display:none;}
+  .car-dots button{
+    width:8px; height:8px; padding:0; border-radius:50%; border:none; cursor:pointer;
+    background:var(--line); transition:background .2s, width .2s;
+  }
+  .car-dots button.active{background:var(--accent); width:20px; border-radius:999px;}
+  .car-caption{position:relative; text-align:center; font-size:0.8rem; color:var(--ink-dim); margin:10px 0 0;}
+  .car-caption:empty{display:none;}
+  @media (prefers-reduced-motion: reduce){ .carousel img{transition:none;} }
 
   .quicklinks{display:flex; gap:10px; margin-top:22px; flex-wrap:wrap;}
   .quicklinks a{
@@ -162,13 +188,36 @@
   .about-body p + p{margin-top:14px;}
   .link-btn{ all:unset; color:var(--accent); font-weight:700; cursor:pointer; text-decoration:underline; }
 
-  .contact-box{
-    background:linear-gradient(135deg, var(--accent-soft), var(--accent2-soft));
-    border:1px solid var(--line); border-radius:24px; padding:38px 36px;
-    margin-top:48px;
+  /* ===================== RODAPÉ (repetido em todas as páginas) ===================== */
+  .site-footer{
+    background:var(--ink); color:#efe4d2;
+    margin-top:24px;
   }
-  .contact-box h2{font-size:clamp(1.3rem,2.6vw,1.7rem); margin-bottom:10px;}
-  .contact-box p{color:var(--ink-dim); margin-bottom:22px;}
+  .site-footer .ft-inner{max-width:var(--maxw); margin:0 auto; padding:48px 28px 28px;}
+  .ft-grid{display:grid; grid-template-columns:1.3fr 1fr; gap:40px; align-items:end;}
+  @media (max-width:760px){ .ft-grid{grid-template-columns:1fr; gap:28px; align-items:start;} }
+  .site-footer h2{color:#fff8f0; font-size:clamp(1.3rem,2.6vw,1.65rem); line-height:1.25; margin-bottom:10px; max-width:460px;}
+  .site-footer .ft-lead{color:#cbb9a0; font-size:0.95rem; margin:0 0 22px; max-width:440px;}
+  .site-footer .btn-primary{background:var(--accent); color:#fff8f0;}
+  .site-footer .btn-primary:hover{background:#b8643a;}
+  .ft-side{display:flex; flex-direction:column; gap:16px; align-items:flex-end;}
+  @media (max-width:760px){ .ft-side{align-items:flex-start;} }
+  .ft-loc{display:inline-flex; align-items:center; gap:8px; color:#efe4d2; font-weight:600; font-size:0.9rem;}
+  .ft-loc svg{width:16px; height:16px; color:#d98a5f;}
+  .ft-icons{display:flex; gap:10px; flex-wrap:wrap;}
+  .ft-icons a{
+    width:40px; height:40px; border-radius:50%;
+    display:inline-flex; align-items:center; justify-content:center;
+    border:1px solid rgba(239,228,210,0.25); color:#efe4d2;
+    font-weight:800; font-size:0.78rem; letter-spacing:-0.02em;
+    transition:background .2s, border-color .2s, color .2s, transform .15s;
+  }
+  .ft-icons a:hover{background:var(--accent); border-color:var(--accent); color:#fff8f0; transform:translateY(-2px);}
+  .ft-icons svg{width:17px; height:17px;}
+  .ft-bottom{
+    margin-top:36px; padding-top:18px; border-top:1px solid rgba(239,228,210,0.15);
+    font-size:0.78rem; color:#a8957d;
+  }
 
   /* ===================== PÁGINA 2 — PRODUÇÃO ===================== */
   .filter-row{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:30px;}
@@ -194,6 +243,7 @@
   .cat-tag.cat-academica{background:var(--accent2-soft); color:var(--accent-2);}
   .cat-tag.cat-profissional{background:var(--accent-soft); color:var(--accent);}
   .cat-tag.cat-escrita{background:#ece0c8; color:#8a6a3a;}
+  .section-gap{margin-top:12px;}
   .prod-card h4{font-size:1.02rem; line-height:1.32;}
   .prod-card .prod-meta{font-size:0.82rem; color:var(--ink-dim);}
   .prod-card .prod-desc{font-size:0.88rem; color:var(--ink-dim); margin-top:2px;}
@@ -247,6 +297,14 @@
   .t-item .t-org{color:var(--accent); font-weight:600; font-size:0.87rem; margin-bottom:2px;}
   .t-item .t-date{color:var(--ink-dim); font-size:0.79rem; margin-bottom:6px; display:block;}
   .t-item p{color:var(--ink-dim); font-size:0.88rem; margin:0;}
+  .t-item .t-mob{
+    margin-top:8px; font-size:0.84rem; color:var(--ink-dim);
+    padding-left:10px; border-left:2px solid var(--accent-2);
+  }
+  .t-item .t-mob strong{
+    display:block; color:var(--accent-2); font-size:0.7rem; font-weight:800;
+    text-transform:uppercase; letter-spacing:0.05em;
+  }
 
   .cv-subtitle{font-size:1.15rem; margin:44px 0 16px; padding-top:24px; border-top:1px solid var(--line);}
   .cv-subtitle:first-of-type{border-top:none; padding-top:0;}
@@ -263,16 +321,29 @@
   }
   @media (max-width:640px){.exp-card{grid-template-columns:1fr; gap:6px;}}
   .exp-card .date{color:var(--accent); font-weight:700; font-size:0.84rem;}
-  .exp-card h4{font-size:1.02rem; margin-bottom:4px;}
-  .exp-card .org{color:var(--ink-dim); font-size:0.87rem;}
+  .exp-card h4{font-size:1.04rem; margin-bottom:3px;}
+  .exp-card .org{color:var(--ink); font-weight:600; font-size:0.88rem;}
+  .exp-card .exp-desc{color:var(--ink-dim); font-size:0.82rem; line-height:1.55; margin:8px 0 0;}
 
   .skills-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(230px,1fr)); gap:18px;}
   .skill-card{background:var(--bg-card); border:1px solid var(--line); border-radius:var(--radius); padding:20px;}
   .skill-card h4{font-size:0.92rem; margin-bottom:12px; color:var(--accent-2);}
 
+  .extra-list{display:flex; flex-direction:column;}
+  .extra-item{
+    display:grid; grid-template-columns:150px 1fr; gap:18px;
+    padding:14px 0; border-bottom:1px dashed var(--line);
+  }
+  .extra-item:last-child{border-bottom:none;}
+  @media (max-width:640px){ .extra-item{grid-template-columns:1fr; gap:2px;} }
+  .extra-item .date{color:var(--ink-dim); font-weight:700; font-size:0.82rem;}
+  .extra-item h4{font-family:'Manrope',sans-serif; font-size:0.95rem; font-weight:700;}
+  .extra-item .org{color:var(--ink-dim); font-size:0.86rem;}
+  .extra-item p{color:var(--ink-dim); font-size:0.82rem; margin:4px 0 0;}
+
   @media print{
     body{overflow:visible;}
-    header, #page-sobre, #page-producao{display:none !important;}
+    header, #page-sobre, #page-pesquisa, #page-producao, .site-footer{display:none !important;}
     .page{position:static; opacity:1; visibility:visible; overflow:visible;}
     #page-cv{padding-top:0;}
     .btn-print{display:none;}
@@ -283,17 +354,18 @@
 
 <header>
   <nav>
-    <div class="logo">Fontoura <span>Planejamento</span></div>
+    <div class="logo">Daniel <span>Fontoura</span></div>
     <button class="navtoggle" id="navToggle" aria-label="Menu">&#9776;</button>
     <div class="nav-right">
       <ul class="navlinks" id="navLinks" role="tablist">
         <li><button data-page="sobre" class="active" data-i18n="nav_sobre"></button></li>
+        <li><button data-page="pesquisa" data-i18n="nav_pesquisa"></button></li>
         <li><button data-page="producao" data-i18n="nav_producao"></button></li>
         <li><button data-page="cv" data-i18n="nav_cv"></button></li>
       </ul>
       <div class="lang-toggle">
-        <button data-lang="pt" class="active">PT</button>
-        <button data-lang="en">EN</button>
+        <button data-lang="en" class="active">EN</button>
+        <button data-lang="pt">PT</button>
       </div>
     </div>
   </nav>
@@ -311,17 +383,15 @@
         <h1><span data-i18n="hero_title_pre"></span><em data-i18n="hero_title_em"></em></h1>
         <p class="lead" data-i18n="hero_lead"></p>
         <div class="cta-row">
-          <button class="btn btn-primary" data-goto="producao" data-i18n="hero_cta_producao"></button>
+          <button class="btn btn-primary" data-goto="pesquisa" data-i18n="hero_cta_pesquisa"></button>
           <button class="btn btn-ghost" data-goto="cv" data-i18n="hero_cta_cv"></button>
         </div>
-        <div class="quicklinks">
-          <a href="https://lattes.cnpq.br/5068339728969931" target="_blank" rel="noopener" data-i18n="hero_link_lattes"></a>
-          <a href="https://www.researchgate.net/profile/Daniel-Fontoura-2" target="_blank" rel="noopener" data-i18n="hero_link_rg"></a>
-          <a href="mailto:daniel.fontoura@ufabc.edu.br" data-i18n="hero_link_email"></a>
-        </div>
+        <div class="quicklinks" id="quickLinks"><!-- gerado via JS a partir de window.LINKS --></div>
       </div>
       <div class="photo-frame">
-        <img src="profile.png" alt="Foto de Daniel Fontoura">
+        <div class="carousel" id="carousel" aria-roledescription="carousel"><!-- gerado via JS a partir de window.FOTOS --></div>
+        <div class="car-dots" id="carDots"></div>
+        <p class="car-caption" id="carCaption"></p>
       </div>
     </div>
 
@@ -332,23 +402,32 @@
     <div class="about-body" id="sobreBody">
       <!-- gerado via JS a partir de window.SOBRE -->
     </div>
-
-    <div class="contact-box">
-      <h2 data-i18n="contato_h2"></h2>
-      <p data-i18n="contato_p"></p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="mailto:daniel.fontoura@ufabc.edu.br">daniel.fontoura@ufabc.edu.br</a>
-        <a class="btn btn-ghost" href="https://lattes.cnpq.br/5068339728969931" target="_blank" rel="noopener">Lattes</a>
-        <a class="btn btn-ghost" href="https://www.researchgate.net/profile/Daniel-Fontoura-2" target="_blank" rel="noopener">ResearchGate</a>
-      </div>
-    </div>
-
-    <p style="color:var(--ink-dim); font-size:0.8rem; margin-top:40px;" data-i18n="footer_copy"></p>
   </div>
 </section>
 
 <!-- ============================================================ -->
-<!-- PÁGINA 2 — PRODUÇÃO (acadêmica e profissional)                -->
+<!-- PÁGINA 2 — PESQUISA (publicações + trabalhos da graduação)    -->
+<!-- ============================================================ -->
+<section class="page" id="page-pesquisa">
+  <div class="page-inner">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="pesq_eyebrow"></span>
+      <h2 data-i18n="pesq_h2"></h2>
+      <p id="pubIntro"></p>
+    </div>
+    <div class="pub-list" id="pubList"><!-- gerado via JS a partir de PUBLICACOES --></div>
+
+    <div class="section-head section-gap">
+      <span class="eyebrow" data-i18n="form_eyebrow"></span>
+      <h2 data-i18n="form_h2"></h2>
+      <p data-i18n="form_p"></p>
+    </div>
+    <div class="prod-grid" id="formGrid"><!-- produções da categoria "academica" --></div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PÁGINA 3 — TRABALHO (profissional + extensão/voluntariado)    -->
 <!-- ============================================================ -->
 <section class="page" id="page-producao">
   <div class="page-inner">
@@ -361,23 +440,15 @@
     <div class="filter-row" id="filterRow">
       <button class="filter-btn active" data-filter="todos" data-i18n="filter_todos"></button>
       <button class="filter-btn" data-filter="profissional" data-i18n="filter_profissional"></button>
-      <button class="filter-btn" data-filter="academica" data-i18n="filter_academica"></button>
       <button class="filter-btn" data-filter="escrita" data-i18n="filter_escrita"></button>
     </div>
 
-    <div class="prod-grid" id="prodGrid"><!-- gerado via JS a partir de PRODUCOES --></div>
-
-    <div class="section-head">
-      <span class="eyebrow" data-i18n="pub_eyebrow"></span>
-      <h2 data-i18n="pub_h2"></h2>
-      <p id="pubIntro"></p>
-    </div>
-    <div class="pub-list" id="pubList"><!-- gerado via JS a partir de PUBLICACOES --></div>
+    <div class="prod-grid" id="prodGrid"><!-- produções "profissional" e "escrita" --></div>
   </div>
 </section>
 
 <!-- ============================================================ -->
-<!-- PÁGINA 3 — CV INTERATIVO                                      -->
+<!-- PÁGINA 4 — CV INTERATIVO                                      -->
 <!-- ============================================================ -->
 <section class="page" id="page-cv">
   <div class="page-inner">
@@ -393,21 +464,31 @@
     <div class="degree-feature" id="cvMestrado"><!-- gerado via JS --></div>
     <div class="timeline" id="cvFormacao"><!-- gerado via JS --></div>
 
-    <h3 class="cv-subtitle" data-i18n="cv_sec_complementar"></h3>
-    <div class="chip-wrap" id="cvComplementar"><!-- gerado via JS --></div>
-
     <h3 class="cv-subtitle" data-i18n="cv_sec_experiencia"></h3>
     <div class="exp-grid" id="cvExperiencia"><!-- gerado via JS --></div>
 
+    <h3 class="cv-subtitle" data-i18n="cv_sec_complementar"></h3>
+    <div class="chip-wrap" id="cvComplementar"><!-- gerado via JS --></div>
+
     <h3 class="cv-subtitle" data-i18n="cv_sec_habilidades"></h3>
     <div class="skills-grid" id="cvHabilidades"><!-- gerado via JS --></div>
+
+    <div id="cvExtrasWrap">
+      <h3 class="cv-subtitle" data-i18n="cv_sec_extras"></h3>
+      <div class="extra-list" id="cvExtras"><!-- gerado via JS --></div>
+    </div>
   </div>
 </section>
 
 <script src="data.js"></script>
 <script>
-let LANG = 'pt';
+/* Idioma padrão: inglês. Se o visitante escolher PT, o navegador lembra. */
+let LANG = 'en';
+try { const saved = localStorage.getItem('lang'); if (saved === 'pt' || saved === 'en') LANG = saved; } catch(e){}
+
 const CAT_LABEL_KEY = { profissional:"cat_profissional", academica:"cat_academica", escrita:"cat_escrita" };
+/* Em qual página cada categoria aparece */
+const CAT_PAGE = { profissional:"producao", escrita:"producao", academica:"pesquisa" };
 
 function S(key){ return (window.STRINGS[LANG] && window.STRINGS[LANG][key]) || window.STRINGS.pt[key] || ''; }
 
@@ -416,10 +497,62 @@ function applyStrings(){
     const key = el.dataset.i18n;
     el.textContent = S(key);
   });
-  document.title = LANG === 'en' ? 'Fontoura Planejamento — Daniel Fontoura' : 'Fontoura Planejamento — Daniel Fontoura';
+  document.title = LANG === 'en' ? 'Daniel Fontoura — Territorial Planning & Research' : 'Daniel Fontoura — Planejamento Territorial & Pesquisa';
+  const L = window.LINKS || {};
+  const a = (href, txt) => href ? `<a href="${href}" target="_blank" rel="noopener" style="color:var(--accent);">${txt}</a>` : txt;
   document.getElementById('pubIntro').innerHTML =
-    S('pub_p_pre') + '<a href="https://lattes.cnpq.br/5068339728969931" target="_blank" rel="noopener" style="color:var(--accent);">' + S('pub_p_lattes') + '</a>' +
-    S('pub_p_mid') + '<a href="https://www.researchgate.net/profile/Daniel-Fontoura-2" target="_blank" rel="noopener" style="color:var(--accent);">' + S('pub_p_rg') + '</a>' + S('pub_p_post');
+    S('pub_p_pre') + (L.orcid ? a(L.orcid, S('pub_p_orcid')) + S('pub_p_sep') : '') +
+    a(L.lattes, S('pub_p_lattes')) + S('pub_p_mid') + a(L.researchgate, S('pub_p_rg')) + S('pub_p_post');
+}
+
+/* ===================== LINKS: topo da página inicial + rodapé ===================== */
+const ICONS = {
+  email:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>',
+  orcid:'iD',
+  lattes:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>',
+  researchgate:'RG',
+  substack:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 8.24H1.46V5.41h21.08v2.83zM1.46 10.81V24L12 18.11 22.54 24V10.81H1.46zM22.54 0H1.46v2.84h21.08V0z"/></svg>',
+  linkedin:'in',
+  pin:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>'
+};
+const LINK_ORDER = [
+  ['email','Email','E-mail'], ['orcid','ORCID','ORCID'], ['lattes','Lattes CV','Currículo Lattes'],
+  ['researchgate','ResearchGate','ResearchGate'], ['substack','Substack','Substack'], ['linkedin','LinkedIn','LinkedIn']
+];
+function linkHref(key, val){ return key === 'email' ? 'mailto:' + val : val; }
+
+function renderLinks(){
+  const L = window.LINKS || {};
+  const ext = k => k === 'email' ? '' : ' target="_blank" rel="noopener"';
+  /* botões de texto no topo da página inicial */
+  document.getElementById('quickLinks').innerHTML = LINK_ORDER
+    .filter(([k]) => L[k])
+    .map(([k, en, pt]) => `<a href="${linkHref(k, L[k])}"${ext(k)}>${LANG === 'en' ? en : pt}</a>`).join('');
+
+  /* rodapé: o mesmo bloco é colocado no fim de cada página */
+  const icons = LINK_ORDER.filter(([k]) => L[k])
+    .map(([k, en, pt]) => `<a href="${linkHref(k, L[k])}"${ext(k)} aria-label="${en}" title="${LANG === 'en' ? en : pt}">${ICONS[k]}</a>`).join('');
+  const local = LANG === 'en' ? (L.localEN || L.local) : L.local;
+  const html = `
+    <div class="ft-inner">
+      <div class="ft-grid">
+        <div>
+          <h2>${S('contato_h2')}</h2>
+          <p class="ft-lead">${S('contato_p')}</p>
+          ${L.email ? `<a class="btn btn-primary" href="mailto:${L.email}">${S('contato_btn')} →</a>` : ''}
+        </div>
+        <div class="ft-side">
+          ${local ? `<span class="ft-loc">${ICONS.pin}${local}</span>` : ''}
+          <div class="ft-icons">${icons}</div>
+        </div>
+      </div>
+      <div class="ft-bottom">${S('footer_copy')}</div>
+    </div>`;
+  document.querySelectorAll('.page').forEach(page => {
+    let ft = page.querySelector(':scope > .site-footer');
+    if (!ft){ ft = document.createElement('footer'); ft.className = 'site-footer'; page.appendChild(ft); }
+    ft.innerHTML = html;
+  });
 }
 
 function renderSobre(){
@@ -428,41 +561,107 @@ function renderSobre(){
   body.innerHTML = `
     <p>${s.p1}</p>
     <p>${s.p2}</p>
-    <p>${S('sobre_p3_pre')}<button class="link-btn" data-goto="cv">${S('sobre_p3_cv')}</button>${S('sobre_p3_mid')}<button class="link-btn" data-goto="producao">${S('sobre_p3_prod')}</button>${S('sobre_p3_post')}</p>
+    <p>${S('sobre_p3_pre')}<button class="link-btn" data-goto="cv">${S('sobre_p3_cv')}</button>${S('sobre_p3_mid')}<button class="link-btn" data-goto="pesquisa">${S('sobre_p3_pesq')}</button>${S('sobre_p3_mid2')}<button class="link-btn" data-goto="producao">${S('sobre_p3_prod')}</button>${S('sobre_p3_post')}</p>
   `;
   body.querySelectorAll('[data-goto]').forEach(el => el.addEventListener('click', () => goToPage(el.dataset.goto)));
+}
+
+/* ===================== CARROSSEL DE FOTOS ===================== */
+let carIndex = 0, carTimer = null;
+function fotosList(){
+  const f = (window.FOTOS || []).filter(x => x && x.arquivo);
+  return f.length ? f : [{ arquivo:'fotos/foto-01.jpg', legenda:'', legendaEN:'' }];
+}
+function buildCarousel(){
+  const fotos = fotosList();
+  const car = document.getElementById('carousel');
+  const dots = document.getElementById('carDots');
+  car.innerHTML = fotos.map((f, i) =>
+    `<img src="${f.arquivo}" alt="Daniel Fontoura" class="${i === 0 ? 'active' : ''}" ${i > 0 ? 'loading="lazy"' : ''}>`
+  ).join('');
+  dots.innerHTML = '';
+  if (fotos.length > 1){
+    car.insertAdjacentHTML('beforeend',
+      '<button class="car-arrow prev" aria-label="Previous photo">&#8249;</button>' +
+      '<button class="car-arrow next" aria-label="Next photo">&#8250;</button>');
+    car.querySelector('.prev').addEventListener('click', () => { showFoto(carIndex - 1); restartTimer(); });
+    car.querySelector('.next').addEventListener('click', () => { showFoto(carIndex + 1); restartTimer(); });
+    dots.innerHTML = fotos.map((_, i) => `<button aria-label="Photo ${i+1}" class="${i === 0 ? 'active' : ''}"></button>`).join('');
+    dots.querySelectorAll('button').forEach((b, i) => b.addEventListener('click', () => { showFoto(i); restartTimer(); }));
+    car.addEventListener('mouseenter', stopTimer);
+    car.addEventListener('mouseleave', restartTimer);
+    /* deslizar com o dedo no celular */
+    let x0 = null;
+    car.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, {passive:true});
+    car.addEventListener('touchend', e => {
+      if (x0 === null) return;
+      const dx = e.changedTouches[0].clientX - x0;
+      if (Math.abs(dx) > 40){ showFoto(carIndex + (dx < 0 ? 1 : -1)); restartTimer(); }
+      x0 = null;
+    });
+    restartTimer();
+  }
+  updateCaption();
+}
+function showFoto(i){
+  const imgs = document.querySelectorAll('#carousel img');
+  const n = imgs.length;
+  carIndex = (i + n) % n;
+  imgs.forEach((img, k) => img.classList.toggle('active', k === carIndex));
+  document.querySelectorAll('#carDots button').forEach((b, k) => b.classList.toggle('active', k === carIndex));
+  updateCaption();
+}
+function updateCaption(){
+  const f = fotosList()[carIndex] || {};
+  const txt = LANG === 'en' ? (f.legendaEN || f.legenda || '') : (f.legenda || '');
+  document.getElementById('carCaption').textContent = txt;
+}
+function stopTimer(){ if (carTimer){ clearInterval(carTimer); carTimer = null; } }
+function restartTimer(){
+  stopTimer();
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (fotosList().length > 1) carTimer = setInterval(() => showFoto(carIndex + 1), 6000);
+}
+
+function prodCard(p){
+  const card = document.createElement('div');
+  card.className = 'prod-card';
+  const hasLink = p.arquivo || p.link;
+  const linkHref = p.arquivo ? p.arquivo : p.link;
+  const titulo = LANG === 'en' ? (p.tituloEN || p.titulo) : p.titulo;
+  const descricao = LANG === 'en' ? (p.descricaoEN || p.descricao) : p.descricao;
+  card.innerHTML = `
+    <span class="cat-tag cat-${p.categoria}">${S(CAT_LABEL_KEY[p.categoria])}</span>
+    <h4>${titulo}</h4>
+    <div class="prod-meta">${p.subtitulo || ''}${p.subtitulo && p.periodo ? ' · ' : ''}${p.periodo || ''}</div>
+    <div class="prod-desc">${descricao || ''}</div>
+    ${hasLink
+      ? `<a class="prod-link" href="${linkHref}" target="_blank" rel="noopener">${S('prod_link_ver')}</a>`
+      : `<span class="prod-link disabled">${S('prod_link_disabled')}</span>`}
+  `;
+  return card;
+}
+
+function renderFormacaoProjetos(){
+  const grid = document.getElementById('formGrid');
+  grid.innerHTML = '';
+  window.PRODUCOES.filter(p => CAT_PAGE[p.categoria] === 'pesquisa').forEach(p => grid.appendChild(prodCard(p)));
 }
 
 function renderProducoes(filter){
   const grid = document.getElementById('prodGrid');
   grid.innerHTML = '';
   window.PRODUCOES
+    .filter(p => CAT_PAGE[p.categoria] === 'producao')
     .filter(p => filter === 'todos' || p.categoria === filter)
-    .forEach(p => {
-      const card = document.createElement('div');
-      card.className = 'prod-card';
-      const hasLink = p.arquivo || p.link;
-      const linkHref = p.arquivo ? p.arquivo : p.link;
-      const titulo = LANG === 'en' ? (p.tituloEN || p.titulo) : p.titulo;
-      const descricao = LANG === 'en' ? (p.descricaoEN || p.descricao) : p.descricao;
-      card.innerHTML = `
-        <span class="cat-tag cat-${p.categoria}">${S(CAT_LABEL_KEY[p.categoria])}</span>
-        <h4>${titulo}</h4>
-        <div class="prod-meta">${p.subtitulo || ''}${p.subtitulo && p.periodo ? ' · ' : ''}${p.periodo || ''}</div>
-        <div class="prod-desc">${descricao || ''}</div>
-        ${hasLink
-          ? `<a class="prod-link" href="${linkHref}" target="_blank" rel="noopener">${S('prod_link_ver')}</a>`
-          : `<span class="prod-link disabled">${S('prod_link_disabled')}</span>`}
-      `;
-      grid.appendChild(card);
-    });
+    .forEach(p => grid.appendChild(prodCard(p)));
 }
 
 function renderPublicacoes(){
   const list = document.getElementById('pubList');
   list.innerHTML = window.PUBLICACOES.map(p => `
     <div class="pub-item">
-      <span class="pub-tag">${p.tag}</span><br>
+      <span class="pub-tag">${LANG === 'en' ? (p.tagEN || p.tag) : p.tag}</span><br>
       ${p.texto}
     </div>
   `).join('');
@@ -489,10 +688,9 @@ function renderCV(){
       <span class="t-org">${f.instituicao}</span>
       <span class="t-date">${f.periodo}</span>
       ${f.detalhe ? `<p>${f.detalhe}</p>` : ''}
+      ${f.mobilidade && f.mobilidade.trim() ? `<div class="t-mob"><strong>${S('cv_mobilidade_label')}</strong>${f.mobilidade}</div>` : ''}
     </div>
   `).join('');
-
-  document.getElementById('cvComplementar').innerHTML = cv.complementar.map(c => `<span class="chip">${c}</span>`).join('');
 
   document.getElementById('cvExperiencia').innerHTML = cv.experiencia.map(e => `
     <div class="exp-card">
@@ -500,14 +698,30 @@ function renderCV(){
       <div>
         <h4>${e.cargo}</h4>
         <div class="org">${e.empresa}</div>
+        ${e.descricao && e.descricao.trim() ? `<p class="exp-desc">${e.descricao}</p>` : ''}
       </div>
     </div>
   `).join('');
+
+  document.getElementById('cvComplementar').innerHTML = cv.complementar.map(c => `<span class="chip">${c}</span>`).join('');
 
   document.getElementById('cvHabilidades').innerHTML = cv.habilidades.map(h => `
     <div class="skill-card">
       <h4>${h.categoria}</h4>
       <div class="chip-wrap">${h.itens.map(i => `<span class="chip">${i}</span>`).join('')}</div>
+    </div>
+  `).join('');
+
+  const extras = (cv.extras || []).filter(x => x && x.titulo);
+  document.getElementById('cvExtrasWrap').style.display = extras.length ? '' : 'none';
+  document.getElementById('cvExtras').innerHTML = extras.map(x => `
+    <div class="extra-item">
+      <div class="date">${x.periodo || ''}</div>
+      <div>
+        <h4>${x.titulo}</h4>
+        ${x.instituicao ? `<div class="org">${x.instituicao}</div>` : ''}
+        ${x.descricao && x.descricao.trim() ? `<p>${x.descricao}</p>` : ''}
+      </div>
     </div>
   `).join('');
 }
@@ -517,8 +731,16 @@ function renderAll(){
   renderSobre();
   const activeFilter = document.querySelector('.filter-btn.active')?.dataset.filter || 'todos';
   renderProducoes(activeFilter);
+  renderFormacaoProjetos();
   renderPublicacoes();
   renderCV();
+  renderLinks();
+  updateCaption();
+}
+
+function syncLangUI(){
+  document.querySelectorAll('.lang-toggle button').forEach(b => b.classList.toggle('active', b.dataset.lang === LANG));
+  document.documentElement.lang = LANG === 'en' ? 'en' : 'pt-BR';
 }
 
 document.querySelectorAll('.filter-btn').forEach(btn => {
@@ -532,8 +754,8 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
 document.querySelectorAll('.lang-toggle button').forEach(btn => {
   btn.addEventListener('click', () => {
     LANG = btn.dataset.lang;
-    document.querySelectorAll('.lang-toggle button').forEach(b => b.classList.toggle('active', b.dataset.lang === LANG));
-    document.documentElement.lang = LANG === 'en' ? 'en' : 'pt-BR';
+    try { localStorage.setItem('lang', LANG); } catch(e){}
+    syncLangUI();
     renderAll();
   });
 });
@@ -556,9 +778,11 @@ document.querySelectorAll('[data-goto]').forEach(el => {
 const navToggle = document.getElementById('navToggle');
 navToggle.addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
 
+syncLangUI();
+buildCarousel();
 renderAll();
 const initial = (location.hash || '').replace('#','');
-if (['sobre','producao','cv'].includes(initial)) goToPage(initial);
+if (['sobre','pesquisa','producao','cv'].includes(initial)) goToPage(initial);
 </script>
 </body>
 </html>
