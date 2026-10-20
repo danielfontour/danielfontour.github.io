@@ -1,20 +1,42 @@
 /* =====================================================================
    DADOS DO SITE — Textos, CV, Produções e Publicações
-   Gerado pelo editor.html em 2026-10-15.
+   Gerado pelo editor.html em 2026-10-20.
    Você pode editar este arquivo tanto pelo editor.html quanto direto
    no texto abaixo.
    ===================================================================== */
 
+/* FOTOS do carrossel da página inicial (pasta "fotos"). */
+window.FOTOS = [
+  {
+    "arquivo": "fotos/foto-01.jpg",
+    "legenda": "",
+    "legendaEN": ""
+  }
+];
+
+/* LINKS e contato (topo da página inicial e rodapé). Vazio = ícone escondido. */
+window.LINKS = {
+  "email": "daniel.fontoura@ufabc.edu.br",
+  "orcid": "https://orcid.org/0009-0009-5344-7109",
+  "lattes": "https://lattes.cnpq.br/5068339728969931",
+  "researchgate": "https://www.researchgate.net/profile/Daniel-Fontoura-2",
+  "substack": "https://fontourinha.substack.com/",
+  "linkedin": "",
+  "local": "São Paulo, Brasil",
+  "localEN": "São Paulo, Brazil"
+};
+
 window.STRINGS = {
   "pt": {
     "nav_sobre": "Sobre",
-    "nav_producao": "Produção",
+    "nav_pesquisa": "Pesquisa",
+    "nav_producao": "Trabalho",
     "nav_cv": "CV",
     "hero_eyebrow": "Planejamento Territorial & Pesquisa",
     "hero_title_pre": "Territórios, dados e políticas públicas em ",
     "hero_title_em": "diálogo",
     "hero_lead": "Planejador territorial e mestrando em Planejamento e Gestão do Território (UFABC). Atuo entre pesquisa acadêmica e consultoria, transformando diagnóstico territorial e análise espacial em planos e políticas públicas concretas.",
-    "hero_cta_producao": "Ver produção",
+    "hero_cta_pesquisa": "Ver pesquisa",
     "hero_cta_cv": "Ver CV",
     "hero_link_lattes": "Currículo Lattes",
     "hero_link_rg": "ResearchGate",
@@ -23,27 +45,36 @@ window.STRINGS = {
     "sobre_h2": "Da pesquisa ao território",
     "sobre_p3_pre": "Meus detalhes de formação, experiência e habilidades técnicas estão organizados na página de ",
     "sobre_p3_cv": "CV interativo",
-    "sobre_p3_mid": ", e os projetos e publicações na página de ",
-    "sobre_p3_prod": "Produção",
+    "sobre_p3_mid": ", minhas publicações na página de ",
+    "sobre_p3_pesq": "Pesquisa",
+    "sobre_p3_mid2": " e os projetos profissionais na página de ",
+    "sobre_p3_prod": "Trabalho",
     "sobre_p3_post": ".",
     "contato_h2": "Vamos conversar sobre território, dados ou pesquisa?",
     "contato_p": "Aberto a colaborações em pesquisa, consultoria e projetos de planejamento urbano e regional.",
-    "footer_copy": "© 2026 Fontoura Planejamento — Daniel de Andrade Fontoura — Planejamento Territorial, Pesquisa & Consultoria.",
-    "prod_eyebrow": "Produção",
-    "prod_h2": "Projetos, pesquisas e escrita",
-    "prod_p": "Projetos de consultoria e diagnóstico territorial, publicações acadêmicas e produções de divulgação — incluindo o material antes hospedado no meu portfólio de escrita.",
+    "contato_btn": "Enviar e-mail",
+    "footer_copy": "© 2026 Daniel de Andrade Fontoura — Planejamento Territorial, Pesquisa & Consultoria.",
+    "pesq_eyebrow": "Pesquisa",
+    "pesq_h2": "Publicações e produção acadêmica",
+    "form_eyebrow": "Formação",
+    "form_h2": "Trabalhos da graduação",
+    "form_p": "Projetos, diagnósticos e trabalhos de conclusão desenvolvidos durante a graduação.",
+    "prod_eyebrow": "Trabalho",
+    "prod_h2": "Consultoria, extensão e voluntariado",
+    "prod_p": "Projetos de consultoria e diagnóstico territorial, além de projetos de extensão universitária e divulgação científica.",
     "filter_todos": "Todos",
     "filter_profissional": "Profissional",
-    "filter_academica": "Acadêmica",
-    "filter_escrita": "Portfólio de escrita",
+    "filter_escrita": "Extensão & voluntariado",
     "cat_profissional": "Profissional",
-    "cat_academica": "Acadêmica",
-    "cat_escrita": "Portfólio de escrita",
+    "cat_academica": "Formação",
+    "cat_escrita": "Extensão & voluntariado",
     "prod_link_ver": "↗ Ver produção",
     "prod_link_disabled": "Link/arquivo em breve",
-    "pub_eyebrow": "Publicações no Lattes",
+    "pub_eyebrow": "Publicações",
     "pub_h2": "Artigos e produções técnicas",
     "pub_p_pre": "Lista completa e atualizada no ",
+    "pub_p_orcid": "ORCID",
+    "pub_p_sep": ", no ",
     "pub_p_lattes": "Currículo Lattes",
     "pub_p_mid": " e no ",
     "pub_p_rg": "ResearchGate",
@@ -52,23 +83,26 @@ window.STRINGS = {
     "cv_h2": "CV interativo",
     "cv_print": "Imprimir / salvar em PDF",
     "cv_sec_formacao": "Formação acadêmica",
-    "cv_sec_complementar": "Formação complementar & mobilidade acadêmica",
+    "cv_sec_complementar": "Formação complementar",
     "cv_sec_experiencia": "Experiência profissional",
     "cv_sec_habilidades": "Habilidades & ferramentas",
     "cv_tcc_label": "Título da dissertação",
     "cv_orientador_label": "Orientadora",
     "cv_coorientador_label": "Coorientadora",
-    "cv_area_label": "Área"
+    "cv_area_label": "Área",
+    "cv_mobilidade_label": "Mobilidade acadêmica",
+    "cv_sec_extras": "Representação & afiliações"
   },
   "en": {
     "nav_sobre": "About",
+    "nav_pesquisa": "Research",
     "nav_producao": "Work",
     "nav_cv": "CV",
     "hero_eyebrow": "Territorial Planning & Research",
     "hero_title_pre": "Territories, data and public policy in ",
     "hero_title_em": "dialogue",
     "hero_lead": "Territorial planner and Master's student in Territorial Planning and Management (UFABC). I work between academic research and consulting, turning territorial diagnosis and spatial analysis into concrete plans and public policy.",
-    "hero_cta_producao": "See work",
+    "hero_cta_pesquisa": "See research",
     "hero_cta_cv": "See CV",
     "hero_link_lattes": "Lattes CV",
     "hero_link_rg": "ResearchGate",
@@ -77,27 +111,36 @@ window.STRINGS = {
     "sobre_h2": "From research to territory",
     "sobre_p3_pre": "My education, experience and technical skills are organized on the ",
     "sobre_p3_cv": "interactive CV",
-    "sobre_p3_mid": " page, and my projects and publications on the ",
+    "sobre_p3_mid": " page, my publications on the ",
+    "sobre_p3_pesq": "Research",
+    "sobre_p3_mid2": " page, and my professional projects on the ",
     "sobre_p3_prod": "Work",
     "sobre_p3_post": " page.",
     "contato_h2": "Let's talk about territory, data or research?",
     "contato_p": "Open to collaboration on research, consulting and urban and regional planning projects.",
-    "footer_copy": "© 2026 Fontoura Planejamento — Daniel de Andrade Fontoura — Territorial Planning, Research & Consulting.",
+    "contato_btn": "Send an email",
+    "footer_copy": "© 2026 Daniel de Andrade Fontoura — Territorial Planning, Research & Consulting.",
+    "pesq_eyebrow": "Research",
+    "pesq_h2": "Publications and academic output",
+    "form_eyebrow": "Coursework",
+    "form_h2": "Undergraduate projects",
+    "form_p": "Projects, diagnoses and theses developed during my undergraduate studies.",
     "prod_eyebrow": "Work",
-    "prod_h2": "Projects, research and writing",
-    "prod_p": "Consulting and territorial diagnosis projects, academic publications and outreach productions — including material previously hosted on my writing portfolio.",
+    "prod_h2": "Consulting, outreach and volunteering",
+    "prod_p": "Consulting and territorial diagnosis projects, plus university outreach and science communication projects.",
     "filter_todos": "All",
     "filter_profissional": "Professional",
-    "filter_academica": "Academic",
-    "filter_escrita": "Writing portfolio",
+    "filter_escrita": "Outreach & volunteering",
     "cat_profissional": "Professional",
-    "cat_academica": "Academic",
-    "cat_escrita": "Writing portfolio",
+    "cat_academica": "Coursework",
+    "cat_escrita": "Outreach & volunteering",
     "prod_link_ver": "↗ View",
     "prod_link_disabled": "Link/file coming soon",
-    "pub_eyebrow": "Lattes publications",
+    "pub_eyebrow": "Publications",
     "pub_h2": "Articles and technical output",
     "pub_p_pre": "Full, up-to-date list on my ",
+    "pub_p_orcid": "ORCID",
+    "pub_p_sep": ", ",
     "pub_p_lattes": "Lattes CV",
     "pub_p_mid": " and ",
     "pub_p_rg": "ResearchGate",
@@ -106,13 +149,15 @@ window.STRINGS = {
     "cv_h2": "Interactive CV",
     "cv_print": "Print / save as PDF",
     "cv_sec_formacao": "Academic education",
-    "cv_sec_complementar": "Additional training & academic mobility",
+    "cv_sec_complementar": "Additional training",
     "cv_sec_experiencia": "Professional experience",
     "cv_sec_habilidades": "Skills & tools",
     "cv_tcc_label": "Thesis title",
     "cv_orientador_label": "Advisor",
     "cv_coorientador_label": "Co-advisor",
-    "cv_area_label": "Field"
+    "cv_area_label": "Field",
+    "cv_mobilidade_label": "Academic exchange",
+    "cv_sec_extras": "Service & affiliations"
   }
 };
 
@@ -143,30 +188,26 @@ window.CV = {
         "titulo": "Graduação em Ciências Econômicas",
         "instituicao": "Universidade Federal do ABC",
         "periodo": "2023 — em andamento (previsão 2027)",
-        "detalhe": ""
+        "detalhe": "",
+        "mobilidade": ""
       },
       {
         "titulo": "Graduação em Planejamento Territorial",
         "instituicao": "Universidade Federal do ABC",
         "periodo": "2018 — 2023",
-        "detalhe": "TCC: \"Progresso Interrompido? Projetos Petrolíferos do Norte Fluminense e seus Impactos nas Dinâmicas Demográficas e Econômicas\"."
+        "detalhe": "TCC: \"Progresso Interrompido? Projetos Petrolíferos do Norte Fluminense e seus Impactos nas Dinâmicas Demográficas e Econômicas\".",
+        "mobilidade": "Planejamento Urbano — Universidad de Chile (FAU/UChile), Santiago · 360h"
       },
       {
         "titulo": "Bacharelado em Ciências e Humanidades",
         "instituicao": "Universidade Federal do ABC",
         "periodo": "2018 — 2021",
-        "detalhe": "TCC: \"Reconversão Industrial e a Economia do ABC: Aptidão das Principais Cadeias Produtivas com Base em Condicionantes Econômico-Estruturais\"."
-      },
-      {
-        "titulo": "Técnico em Eletrônica",
-        "instituicao": "Instituto Federal Fluminense (IFF), Campos dos Goytacazes",
-        "periodo": "2014 — 2018",
-        "detalhe": ""
+        "detalhe": "TCC: \"Reconversão Industrial e a Economia do ABC: Aptidão das Principais Cadeias Produtivas com Base em Condicionantes Econômico-Estruturais\".",
+        "mobilidade": ""
       }
     ],
     "complementar": [
       "Cartography — ESRI (EUA, 120h)",
-      "Mobilidade em Planejamento Urbano — Universidad de Chile (360h)",
       "Management of Urban Infrastructure — EPFL, Suíça",
       "Objetivos de Desarrollo Sostenible — Universidad de los Andes, Colômbia",
       "Lengua y Cultura — UNNOBA, Argentina",
@@ -179,22 +220,26 @@ window.CV = {
       {
         "periodo": "04/2025 — atual",
         "cargo": "Consultor em Planejamento Territorial",
-        "empresa": "Fontoura Planejamento"
+        "empresa": "Fontoura Planejamento",
+        "descricao": ""
       },
       {
         "periodo": "03/2023 — 06/2026",
         "cargo": "Pesquisador Associado",
-        "empresa": "Laboratório de Estudos e Projetos Urbanos e Regionais (LEPUR/UFABC) — Grupos GATE e GPop"
+        "empresa": "Laboratório de Estudos e Projetos Urbanos e Regionais (LEPUR/UFABC)",
+        "descricao": "Grupos de pesquisa GATE (Geotecnologias para Análise do Território) e GPop (Grupo de Pesquisa em População)."
       },
       {
         "periodo": "01/2024 — 12/2024",
         "cargo": "Docente Temporário",
-        "empresa": "Ministério do Trabalho e Emprego — Introdução a Dados Espaciais e Análise Espacial de Redes e Rotas, no Curso de Auxiliar de Geoprocessamento (Programa Manuel Querino)"
+        "empresa": "Ministério do Trabalho e Emprego",
+        "descricao": "Disciplinas de Introdução a Dados Espaciais e Análise Espacial de Redes e Rotas, no Curso de Auxiliar de Geoprocessamento (Programa Manuel Querino)."
       },
       {
         "periodo": "01/2021 — 11/2022",
         "cargo": "Assistente de Pesquisa",
-        "empresa": "Sindicato dos Metalúrgicos do ABC / Agência de Desenvolvimento Econômico do Grande ABC"
+        "empresa": "Sindicato dos Metalúrgicos do ABC / Agência de Desenvolvimento Econômico do Grande ABC",
+        "descricao": ""
       }
     ],
     "habilidades": [
@@ -235,6 +280,26 @@ window.CV = {
           "Espanhol — lê, fala e escreve"
         ]
       }
+    ],
+    "extras": [
+      {
+        "titulo": "Representante discente — Graduação [A CONFIRMAR]",
+        "instituicao": "UFABC — [A CONFIRMAR: colegiado/conselho]",
+        "periodo": "[A CONFIRMAR]",
+        "descricao": ""
+      },
+      {
+        "titulo": "Representante discente — Pós-graduação [A CONFIRMAR]",
+        "instituicao": "PGT/UFABC — [A CONFIRMAR: colegiado/conselho]",
+        "periodo": "[A CONFIRMAR]",
+        "descricao": ""
+      },
+      {
+        "titulo": "Associado(a) — [A CONFIRMAR: associação profissional/científica]",
+        "instituicao": "[A CONFIRMAR]",
+        "periodo": "[A CONFIRMAR]",
+        "descricao": ""
+      }
     ]
   },
   "en": {
@@ -252,30 +317,26 @@ window.CV = {
         "titulo": "Bachelor's in Economics",
         "instituicao": "Federal University of ABC",
         "periodo": "2023 — ongoing (expected 2027)",
-        "detalhe": ""
+        "detalhe": "",
+        "mobilidade": ""
       },
       {
         "titulo": "Bachelor's in Territorial Planning",
         "instituicao": "Federal University of ABC",
         "periodo": "2018 — 2023",
-        "detalhe": "Thesis: \"Interrupted Progress? Oil Projects in Northern Rio de Janeiro State and Their Impacts on Demographic and Economic Dynamics.\""
+        "detalhe": "Thesis: \"Interrupted Progress? Oil Projects in Northern Rio de Janeiro State and Their Impacts on Demographic and Economic Dynamics.\"",
+        "mobilidade": "Urban Planning — Universidad de Chile (FAU/UChile), Santiago · 360h"
       },
       {
         "titulo": "Bachelor's in Humanities and Sciences",
         "instituicao": "Federal University of ABC",
         "periodo": "2018 — 2021",
-        "detalhe": "Thesis: \"Industrial Reconversion and the ABC Region Economy: Suitability of Key Productive Chains Based on Economic-Structural Conditions.\""
-      },
-      {
-        "titulo": "Technical Degree in Electronics",
-        "instituicao": "Fluminense Federal Institute (IFF), Campos dos Goytacazes",
-        "periodo": "2014 — 2018",
-        "detalhe": ""
+        "detalhe": "Thesis: \"Industrial Reconversion and the ABC Region Economy: Suitability of Key Productive Chains Based on Economic-Structural Conditions.\"",
+        "mobilidade": ""
       }
     ],
     "complementar": [
       "Cartography — ESRI (USA, 120h)",
-      "Urban Planning Academic Mobility — Universidad de Chile (360h)",
       "Management of Urban Infrastructure — EPFL, Switzerland",
       "Sustainable Development Goals for Latin America and the Caribbean — Universidad de los Andes, Colombia",
       "Language and Culture — UNNOBA, Argentina",
@@ -288,22 +349,26 @@ window.CV = {
       {
         "periodo": "04/2025 — present",
         "cargo": "Territorial Planning Consultant",
-        "empresa": "Fontoura Planejamento"
+        "empresa": "Fontoura Planejamento",
+        "descricao": ""
       },
       {
         "periodo": "03/2023 — 06/2026",
         "cargo": "Associate Researcher",
-        "empresa": "Laboratory for Urban and Regional Studies and Projects (LEPUR/UFABC) — GATE and GPop Research Groups"
+        "empresa": "Laboratory for Urban and Regional Studies and Projects (LEPUR/UFABC)",
+        "descricao": "GATE (Geotechnologies for Territorial Analysis) and GPop (Population Research Group) research groups."
       },
       {
         "periodo": "01/2024 — 12/2024",
         "cargo": "Temporary Lecturer",
-        "empresa": "Ministry of Labor and Employment — Introduction to Spatial Data and Network/Route Spatial Analysis, Geoprocessing Assistant Course (Manuel Querino Program)"
+        "empresa": "Ministry of Labor and Employment",
+        "descricao": "Taught Introduction to Spatial Data and Network/Route Spatial Analysis in the Geoprocessing Assistant Course (Manuel Querino Program)."
       },
       {
         "periodo": "01/2021 — 11/2022",
         "cargo": "Research Assistant",
-        "empresa": "ABC Metalworkers' Union / Greater ABC Economic Development Agency"
+        "empresa": "ABC Metalworkers' Union / Greater ABC Economic Development Agency",
+        "descricao": ""
       }
     ],
     "habilidades": [
@@ -343,6 +408,26 @@ window.CV = {
           "English — reads, speaks and writes",
           "Spanish — reads, speaks and writes"
         ]
+      }
+    ],
+    "extras": [
+      {
+        "titulo": "Student Representative — Undergraduate [A CONFIRMAR]",
+        "instituicao": "UFABC — [A CONFIRMAR: board/council]",
+        "periodo": "[A CONFIRMAR]",
+        "descricao": ""
+      },
+      {
+        "titulo": "Student Representative — Graduate Program [A CONFIRMAR]",
+        "instituicao": "PGT/UFABC — [A CONFIRMAR: board/council]",
+        "periodo": "[A CONFIRMAR]",
+        "descricao": ""
+      },
+      {
+        "titulo": "Member — [A CONFIRMAR: professional/scientific association]",
+        "instituicao": "[A CONFIRMAR]",
+        "periodo": "[A CONFIRMAR]",
+        "descricao": ""
       }
     ]
   }
@@ -497,26 +582,32 @@ window.PRODUCOES = [
 window.PUBLICACOES = [
   {
     "tag": "Anais de evento · 2024",
+    "tagEN": "Conference proceedings · 2024",
     "texto": "<strong>FONTOURA, D. A.; LOMBARDI, T. T. N.</strong> — Conurbação em Áreas Não Metropolitanas: reflexões sobre transformações na dinâmica demográfica e urbana em municípios da Bacia de Campos (RJ). XI Congreso de la ALAP, Bogotá."
   },
   {
     "tag": "Anais de evento · 2024",
+    "tagEN": "Conference proceedings · 2024",
     "texto": "<strong>Feitosa, F. F.; Magalhães, R. P.; Cunha, L. F. B.; FONTOURA, D. A.; Rodrigues, M. S.</strong> — Estimativa Territorializada do Déficit Habitacional e Inadequação de Moradias em Diadema: uma alternativa metodológica na escala municipal. XXIII Encontro Nacional de Estudos Populacionais, Brasília."
   },
   {
     "tag": "Anais de evento · 2023",
+    "tagEN": "Conference proceedings · 2023",
     "texto": "<strong>FONTOURA, D. A.; LOMBARDI, T. T. N.</strong> — Projetos petrolíferos do norte fluminense e seus impactos nas dinâmicas econômicas e demográficas. Encontro Nacional Migrações, Ambiente e Trabalho, Campinas."
   },
   {
     "tag": "Artigo · 2022",
+    "tagEN": "Article · 2022",
     "texto": "<strong>Vilha, A. M.; FONTOURA, D. A.; Ferreira, F. D.</strong> — Reconversão Industrial e a Economia do Grande ABC: análise de cadeias produtivas instaladas na região. Boletim de Conjuntura Econômica do Grande ABC (CORECON)."
   },
   {
     "tag": "Produção técnica · 2025",
+    "tagEN": "Technical output · 2025",
     "texto": "<strong>FONTOURA, D. A.; Santos, O. S.; Felippe, B. H.; Nascimento, E. P.</strong> — Diagnóstico Territorial Colaborativo de Heliópolis. Secretaria Municipal de Direitos Humanos e Cidadania de São Paulo."
   },
   {
-    "tag": "Produção técnica · 2024",
+    "tag": "Material Paradidático · 2024",
+    "tagEN": "Textbook · 2024",
     "texto": "<strong>Melo, D. M.; FONTOURA, D. A.; Danna, L. C. C.; Fushita, A. T.; Oliveira, J. A. S.; Carmo, F. C.</strong> — Almanaque de Geoprocessamento. Material paradidático, Programa Manuel Querino de Qualificação Social e Profissional."
   }
 ];
