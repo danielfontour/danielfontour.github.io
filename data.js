@@ -164,11 +164,11 @@ window.STRINGS = {
 window.SOBRE = {
   "pt": {
     "p1": "Sou planejador territorial, pesquisador e consultor, com formação e atuação profissional voltadas ao planejamento urbano e regional. Sou mestrando em Planejamento e Gestão do Território, bacharel em Planejamento Territorial (2023) e em Ciências e Humanidades (2021), e atualmente também curso Ciências Econômicas — todos pela UFABC.",
-    "p2": "Ingressei na Fontoura Planejamento em 2025, onde atuo como consultor técnico, e sou pesquisador associado no INCT Planar (Rede de Pesquisa em Planejamento Urbano e Regional) e nos grupos GATE (Geotecnologias para Análise do Território) e GPop (Grupo de Pesquisa em População), ambos vinculados à UFABC. Já fui docente temporário no Ministério do Trabalho e Emprego, atuando com análise de dados espaciais, e tenho experiência em diagnósticos territoriais, planos executivos locais e geoprocessamento aplicado a políticas públicas."
+    "p2": "Desde 2023 atuo como consultor técnico, e sou pesquisador associado no INCT LabPLan e no LEPUR - Laboratório de Estudos e Projetos Urbanos e Regionais, vinculado à UFABC. Já fui docente temporário no Ministério do Trabalho e Emprego, atuando com análise de dados espaciais, e tenho experiência em diagnósticos territoriais, planos executivos locais e geoprocessamento aplicado a políticas públicas."
   },
   "en": {
     "p1": "I'm a territorial planner, researcher and consultant, with academic training and professional experience focused on urban and regional planning. I'm pursuing a Master's in Territorial Planning and Management, hold a Bachelor's in Territorial Planning (2023) and in Humanities and Sciences (2021), and I'm currently also studying Economics — all at UFABC.",
-    "p2": "I joined Fontoura Planejamento in 2025, where I work as a technical consultant, and I'm an associate researcher at INCT Planar (Urban and Regional Planning Research Network) and at the GATE (Geotechnologies for Territorial Analysis) and GPop (Population Research Group) groups, both affiliated with UFABC. I was previously a temporary lecturer at the Ministry of Labor and Employment, working with spatial data analysis, and I have experience in territorial diagnostics, local action plans and geoprocessing applied to public policy."
+    "p2": "Since 2023, I have worked as a technical consultant and have been an affiliated researcher at both INCT LabPLan and LEPUR. I have also worked as a lecturer for Brazil's Ministry of Labor and Employment, teaching spatial data analysis. My experience includes territorial assessments, local implementation plans, and the application of geospatial technologies to public policy."
   }
 };
 
@@ -178,7 +178,7 @@ window.CV = {
       "pill": "Mestrado em andamento · 2024–2026",
       "titulo": "Mestrado em Planejamento e Gestão do Território",
       "instituicao": "Universidade Federal do ABC (UFABC) · Bolsista CAPES",
-      "tcc": "Tipologias Alternativas para o Ordenamento Regional em Áreas Não-Metropolitanas: o Caso da Bacia de Campos",
+      "tcc": "O Processo de Regionalização em Aglomerados Urbanos Emergentes",
       "orientador": "Thais Tartalha do Nascimento Lombardi",
       "coorientador": "Beatriz Tamaso Mioto",
       "area": "Ciências Sociais Aplicadas · Planejamento Urbano e Regional"
@@ -196,78 +196,79 @@ window.CV = {
         "instituicao": "Universidade Federal do ABC",
         "periodo": "2018 — 2023",
         "detalhe": "TCC: \"Progresso Interrompido? Projetos Petrolíferos do Norte Fluminense e seus Impactos nas Dinâmicas Demográficas e Econômicas\".",
-        "mobilidade": "Planejamento Urbano — Universidad de Chile (FAU/UChile), Santiago · 360h"
+        "mobilidade": "Planejamento Urbano · Universidad de Chile (FAU/UChile), Santiago"
       },
       {
         "titulo": "Bacharelado em Ciências e Humanidades",
         "instituicao": "Universidade Federal do ABC",
         "periodo": "2018 — 2021",
-        "detalhe": "TCC: \"Reconversão Industrial e a Economia do ABC: Aptidão das Principais Cadeias Produtivas com Base em Condicionantes Econômico-Estruturais\".",
+        "detalhe": "TCC: Condicionantes Econômicos-Estruturais para a Reconversão Industrial no Grande ABC",
         "mobilidade": ""
       }
     ],
     "complementar": [
-      "Cartography — ESRI (EUA, 120h)",
-      "Management of Urban Infrastructure — EPFL, Suíça",
-      "Objetivos de Desarrollo Sostenible — Universidad de los Andes, Colômbia",
-      "Lengua y Cultura — UNNOBA, Argentina",
-      "Exploratory Data Analysis with R — UFABC",
-      "Percepção e Mapeamento de Áreas de Risco Geológico — ENAP",
-      "Introdução ao Direito Urbanístico — OAB/SP",
-      "Monitoramento de Políticas Públicas — Fundação João Pinheiro"
+      "Cartography · ESRI, EUA. (120h)",
+      "Español: Lengua y Cultura · UNNOBA, Arg.",
+      "Exploratory Data Analysis with R · UFABC, BR (30h)",
+      "Monitoramento de Políticas Públicas · Fundação João Pinheiro (30h)"
     ],
     "experiencia": [
       {
         "periodo": "04/2025 — atual",
         "cargo": "Consultor em Planejamento Territorial",
-        "empresa": "Fontoura Planejamento",
-        "descricao": ""
+        "empresa": "POLO Planejamento \n",
+        "descricao": "Consultor Técnico em Planejamento Territorial, atuando no desenvolvimento de Planos Setoriais, Planos Diretores, Diagnósticos Territoriais e Avaliação e Monitoramento de Políticas Públicas para Governos Locais e Organizações do Terceiro Setor"
       },
       {
-        "periodo": "03/2023 — 06/2026",
+        "periodo": "07/2024 — Atualmente",
+        "cargo": "Pesquisador Associado",
+        "empresa": "INCT LabPlan",
+        "descricao": "Pesquisador no Eixo 1 - Padrões e fronteiras do desenvolvimento regional e urbano, no projeto \"Transformações econômicas recentes das metrópoles brasileiras: diversidade, heterogeneidade e novas dinâmicas\"; sob supervisão da Dr.ª Beatriz Mioto "
+      },
+      {
+        "periodo": "03/2023 — Atualmente",
         "cargo": "Pesquisador Associado",
         "empresa": "Laboratório de Estudos e Projetos Urbanos e Regionais (LEPUR/UFABC)",
-        "descricao": "Grupos de pesquisa GATE (Geotecnologias para Análise do Território) e GPop (Grupo de Pesquisa em População)."
+        "descricao": "Membro do grupo de pesquisa GATE - Geotecnologias para Análise do Território (2023 - Atualmente)\nPesquisador no projeto \"ESTIMA – Estimativas Espaciais e\nMultidimensionais de Necessidades Habitacionais\", sob coordenação da Prof.ª Flávia Feitosa (2023-2024)"
       },
       {
         "periodo": "01/2024 — 12/2024",
-        "cargo": "Docente Temporário",
+        "cargo": "Docente",
         "empresa": "Ministério do Trabalho e Emprego",
-        "descricao": "Disciplinas de Introdução a Dados Espaciais e Análise Espacial de Redes e Rotas, no Curso de Auxiliar de Geoprocessamento (Programa Manuel Querino)."
+        "descricao": "Disciplinas de Introdução a Dados Espaciais e Análise Espacial de Redes e Rotas, no Curso de Auxiliar de Geoprocessamento do Programa Manuel Querino de Qualificação Profissional."
       },
       {
         "periodo": "01/2021 — 11/2022",
         "cargo": "Assistente de Pesquisa",
         "empresa": "Sindicato dos Metalúrgicos do ABC / Agência de Desenvolvimento Econômico do Grande ABC",
-        "descricao": ""
+        "descricao": "Pesquisador Júnior no Projeto \"Reconversão Industrial no Grande ABC: Condicionantes Econômico-Estruturais para as Principais Cadeias Produtivas\""
       }
     ],
     "habilidades": [
       {
         "categoria": "Análise de dados",
         "itens": [
-          "Exploratory Data Analysis (R)",
+          "Análise Exploratória de Dados em R",
           "Estatística aplicada",
           "Análise demográfica",
-          "Diagnóstico socioterritorial"
+          "Modelos Econométricos"
         ]
       },
       {
         "categoria": "Geoprocessamento & SIG",
         "itens": [
           "QGIS",
+          "Manipulação de dados vetoriais",
           "Análise espacial de redes e rotas",
-          "Produção de dados vetoriais",
-          "Cartografia (ESRI)",
-          "Mapeamento de risco geológico"
+          "Mapeamento de risco geológico via LandSat"
         ]
       },
       {
         "categoria": "Planejamento & políticas públicas",
         "itens": [
-          "Planos de mobilidade",
           "Diagnóstico territorial",
           "Déficit habitacional",
+          "Planos de mobilidade",
           "Monitoramento de políticas públicas",
           "Direito urbanístico"
         ]
@@ -275,29 +276,42 @@ window.CV = {
       {
         "categoria": "Idiomas",
         "itens": [
-          "Português — nativo",
-          "Inglês — lê, fala e escreve",
-          "Espanhol — lê, fala e escreve"
+          "Português · Nativo",
+          "Inglês · Avançado",
+          "Espanhol · Avançado",
+          "Francês · Básico"
         ]
       }
     ],
     "extras": [
       {
-        "titulo": "Representante discente — Graduação [A CONFIRMAR]",
-        "instituicao": "UFABC — [A CONFIRMAR: colegiado/conselho]",
-        "periodo": "[A CONFIRMAR]",
+        "titulo": "Representante discente · Graduação ",
+        "instituicao": "UFABC — BPT",
+        "periodo": "2021 - 2023",
         "descricao": ""
       },
       {
-        "titulo": "Representante discente — Pós-graduação [A CONFIRMAR]",
-        "instituicao": "PGT/UFABC — [A CONFIRMAR: colegiado/conselho]",
-        "periodo": "[A CONFIRMAR]",
+        "titulo": "Representante discente · Pós-graduação em Planejamento e Gestão do Território",
+        "instituicao": "PGT/UFABC",
+        "periodo": "2024 - 2026",
         "descricao": ""
       },
       {
-        "titulo": "Associado(a) — [A CONFIRMAR: associação profissional/científica]",
-        "instituicao": "[A CONFIRMAR]",
-        "periodo": "[A CONFIRMAR]",
+        "titulo": "Associado",
+        "instituicao": "ABEP - Associação Brasileira de Estudos Populacionais",
+        "periodo": "2023 - Atualmente",
+        "descricao": ""
+      },
+      {
+        "titulo": "Associado",
+        "instituicao": "ALAP - Associação Latinoamericana de População",
+        "periodo": "2024 - Atualmente",
+        "descricao": ""
+      },
+      {
+        "titulo": "Associado",
+        "instituicao": "ANPUR - Associação Nacional de Pós-graduação em Planejamento Urbano e Regional",
+        "periodo": "2025 - Atualmente",
         "descricao": ""
       }
     ]
@@ -307,7 +321,7 @@ window.CV = {
       "pill": "Ongoing Master's · 2024–2026",
       "titulo": "Master's in Territorial Planning and Management",
       "instituicao": "Federal University of ABC (UFABC) · CAPES Scholarship",
-      "tcc": "Alternative Typologies for Regional Planning in Non-Metropolitan Areas: The Case of the Campos Basin",
+      "tcc": "The Process of Regionalization in Emerging Urban Agglomerates",
       "orientador": "Thais Tartalha do Nascimento Lombardi",
       "coorientador": "Beatriz Tamaso Mioto",
       "area": "Applied Social Sciences · Urban and Regional Planning"
@@ -325,78 +339,79 @@ window.CV = {
         "instituicao": "Federal University of ABC",
         "periodo": "2018 — 2023",
         "detalhe": "Thesis: \"Interrupted Progress? Oil Projects in Northern Rio de Janeiro State and Their Impacts on Demographic and Economic Dynamics.\"",
-        "mobilidade": "Urban Planning — Universidad de Chile (FAU/UChile), Santiago · 360h"
+        "mobilidade": "Urban Planning · Universidad de Chile (FAU/UChile), Santiago"
       },
       {
         "titulo": "Bachelor's in Humanities and Sciences",
         "instituicao": "Federal University of ABC",
         "periodo": "2018 — 2021",
-        "detalhe": "Thesis: \"Industrial Reconversion and the ABC Region Economy: Suitability of Key Productive Chains Based on Economic-Structural Conditions.\"",
+        "detalhe": "",
         "mobilidade": ""
       }
     ],
     "complementar": [
-      "Cartography — ESRI (USA, 120h)",
-      "Management of Urban Infrastructure — EPFL, Switzerland",
-      "Sustainable Development Goals for Latin America and the Caribbean — Universidad de los Andes, Colombia",
-      "Language and Culture — UNNOBA, Argentina",
-      "Exploratory Data Analysis with R — UFABC",
-      "Geological Risk Area Perception and Mapping — ENAP",
-      "Introduction to Urban Law — OAB/SP",
-      "Public Policy Monitoring — Fundação João Pinheiro"
+      "Cartography · ESRI, USA (120h)",
+      "Advanced Spanish: Language and Culture · UNNOBA, Arg.",
+      "Exploratory Data Analysis with R · UFABC, BR (30h)",
+      "Public Policy Monitoring · Fundação João Pinheiro (30h)"
     ],
     "experiencia": [
       {
         "periodo": "04/2025 — present",
         "cargo": "Territorial Planning Consultant",
-        "empresa": "Fontoura Planejamento",
-        "descricao": ""
+        "empresa": "POLO Planejamento",
+        "descricao": "Territorial Planning Consultant, acting on the development of masterplans, mobility plans and transit guidelines, territorial assessments and public policy monitoring for local governments and third sector organizations"
       },
       {
-        "periodo": "03/2023 — 06/2026",
+        "periodo": "07/2024 — present",
+        "cargo": "Associate Researcher",
+        "empresa": "INCT LabPlan",
+        "descricao": "Researcher in Axis 1 – Patterns and Frontiers of Regional and Urban Development, within the project “Recent Economic Transformations in Brazilian Metropolitan Areas: Diversity, Heterogeneity, and New Dynamics,” with Dr. Beatriz Mioto."
+      },
+      {
+        "periodo": "03/2023 — present",
         "cargo": "Associate Researcher",
         "empresa": "Laboratory for Urban and Regional Studies and Projects (LEPUR/UFABC)",
-        "descricao": "GATE (Geotechnologies for Territorial Analysis) and GPop (Population Research Group) research groups."
+        "descricao": "Researcher on GATE - Geotecnologies for Territorial Analysis (2023 - present)\nJunior Researcher within the project \"ESTIMA: Measuring Spatial and Multidimentional Habitational Needs\" (ProEC: Project Number  PJ039-2024)"
       },
       {
         "periodo": "01/2024 — 12/2024",
-        "cargo": "Temporary Lecturer",
+        "cargo": "Lecturer",
         "empresa": "Ministry of Labor and Employment",
-        "descricao": "Taught Introduction to Spatial Data and Network/Route Spatial Analysis in the Geoprocessing Assistant Course (Manuel Querino Program)."
+        "descricao": "Taught Introduction to Spatial Data, Vector Analysis and Network Spatial Analysis in the Geoprocessing Assistant Certification, offered by Brazilian National Ministry of Labor and Employment's Manuel Querino Program of Professional Education."
       },
       {
         "periodo": "01/2021 — 11/2022",
-        "cargo": "Research Assistant",
+        "cargo": "Research Internship",
         "empresa": "ABC Metalworkers' Union / Greater ABC Economic Development Agency",
-        "descricao": ""
+        "descricao": "Junior Researcher on the project \"Industrial Reconversion in the Greater ABC Region: Economic and Structural Determinants of Major Production Chains\" (FINEP: Project Number  29082/2021)."
       }
     ],
     "habilidades": [
       {
         "categoria": "Data analysis",
         "itens": [
-          "Exploratory Data Analysis (R)",
+          "Exploratory Data Analysis with R",
           "Applied statistics",
           "Demographic analysis",
-          "Socio-territorial diagnosis"
+          "Economectric Moddeling"
         ]
       },
       {
         "categoria": "GIS & geoprocessing",
         "itens": [
           "QGIS",
-          "Network and route spatial analysis",
           "Vector data production",
-          "Cartography (ESRI)",
-          "Geological risk mapping"
+          "Network and route spatial analysis",
+          "Geological risk mapping using LandSat"
         ]
       },
       {
         "categoria": "Planning & public policy",
         "itens": [
-          "Mobility plans",
           "Territorial diagnosis",
-          "Housing deficit",
+          "Housing policy",
+          "Mobility plans and Transit Guidelines",
           "Public policy monitoring",
           "Urban law"
         ]
@@ -404,29 +419,42 @@ window.CV = {
       {
         "categoria": "Languages",
         "itens": [
-          "Portuguese — native",
-          "English — reads, speaks and writes",
-          "Spanish — reads, speaks and writes"
+          "Portuguese · Native",
+          "English ·  C2",
+          "Spanish · C1",
+          "French · A2"
         ]
       }
     ],
     "extras": [
       {
-        "titulo": "Student Representative — Undergraduate [A CONFIRMAR]",
-        "instituicao": "UFABC — [A CONFIRMAR: board/council]",
-        "periodo": "[A CONFIRMAR]",
+        "titulo": "Student Representative · Undergraduate",
+        "instituicao": "UFABC — Territorial Planning Department Council",
+        "periodo": "2021 - 2023",
         "descricao": ""
       },
       {
-        "titulo": "Student Representative — Graduate Program [A CONFIRMAR]",
-        "instituicao": "PGT/UFABC — [A CONFIRMAR: board/council]",
-        "periodo": "[A CONFIRMAR]",
+        "titulo": "Student Representative · Graduate Program",
+        "instituicao": "UFABC - Territorial Planning Graduate Program Council",
+        "periodo": "2024 - 2026",
         "descricao": ""
       },
       {
-        "titulo": "Member — [A CONFIRMAR: professional/scientific association]",
-        "instituicao": "[A CONFIRMAR]",
-        "periodo": "[A CONFIRMAR]",
+        "titulo": "Member",
+        "instituicao": "ABEP - Brazilian Associantion of Populational Studies",
+        "periodo": "2023 - Present",
+        "descricao": ""
+      },
+      {
+        "titulo": "Member",
+        "instituicao": "ALAP - Latinamerican Association of Population",
+        "periodo": "2024 - Present",
+        "descricao": ""
+      },
+      {
+        "titulo": "Member",
+        "instituicao": "ANPUR - National Association for Graduate Studies in Urban and Regional Planning",
+        "periodo": "2025 - Present",
         "descricao": ""
       }
     ]
@@ -583,7 +611,7 @@ window.PUBLICACOES = [
   {
     "tag": "Anais de evento · 2024",
     "tagEN": "Conference proceedings · 2024",
-    "texto": "<strong>FONTOURA, D. A.; LOMBARDI, T. T. N.</strong> — Conurbação em Áreas Não Metropolitanas: reflexões sobre transformações na dinâmica demográfica e urbana em municípios da Bacia de Campos (RJ). XI Congreso de la ALAP, Bogotá."
+    "texto": "<strong>FONTOURA, D. A.; LOMBARDI, T. T. N.</strong> — Conurbación en Áreas No-metropolitanas: Reflexiones sobre Transformaciones en la Dinámica Demográfica y Urbana en Municipios de la Cuenca de Campos (RJ). XXI Congreso de la Asociación Latinoamericana de Población, 2024, Bogotá."
   },
   {
     "tag": "Anais de evento · 2024",
@@ -596,8 +624,8 @@ window.PUBLICACOES = [
     "texto": "<strong>FONTOURA, D. A.; LOMBARDI, T. T. N.</strong> — Projetos petrolíferos do norte fluminense e seus impactos nas dinâmicas econômicas e demográficas. Encontro Nacional Migrações, Ambiente e Trabalho, Campinas."
   },
   {
-    "tag": "Artigo · 2022",
-    "tagEN": "Article · 2022",
+    "tag": "Texto para Discussão · 2022",
+    "tagEN": "Workbook · 2022",
     "texto": "<strong>Vilha, A. M.; FONTOURA, D. A.; Ferreira, F. D.</strong> — Reconversão Industrial e a Economia do Grande ABC: análise de cadeias produtivas instaladas na região. Boletim de Conjuntura Econômica do Grande ABC (CORECON)."
   },
   {
