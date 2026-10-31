@@ -139,13 +139,15 @@
     background:linear-gradient(135deg, var(--accent), var(--accent-2));
     opacity:0.28; filter:blur(16px);
   }
-  /* CARROSSEL — as fotos ficam empilhadas e a ativa aparece por cima */
+  /* CARROSSEL — as fotos ficam empilhadas e a ativa aparece por cima.
+     object-fit:contain + fundo preenchido: funciona bem com fotos horizontais,
+     verticais ou quadradas misturadas, sem cortar ninguém. */
   .carousel{
-    position:relative; width:100%; aspect-ratio:1/1.15; overflow:hidden;
+    position:relative; width:100%; aspect-ratio:4/3; overflow:hidden;
     border-radius:20px; border:1px solid var(--line); background:var(--bg-soft);
   }
   .carousel img{
-    position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+    position:absolute; inset:0; width:100%; height:100%; object-fit:contain;
     opacity:0; transition:opacity .7s ease;
   }
   .carousel img.active{opacity:1;}

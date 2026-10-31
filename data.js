@@ -1,6 +1,6 @@
 /* =====================================================================
    DADOS DO SITE — Textos, CV, Produções e Publicações
-   Gerado pelo editor.html em 2026-10-20.
+   Gerado pelo editor.html em 2026-10-31.
    Você pode editar este arquivo tanto pelo editor.html quanto direto
    no texto abaixo.
    ===================================================================== */
@@ -9,6 +9,11 @@
 window.FOTOS = [
   {
     "arquivo": "fotos/foto-01.jpg",
+    "legenda": "",
+    "legendaEN": ""
+  },
+  {
+    "arquivo": "fotos/Foto-02.jpg",
     "legenda": "",
     "legendaEN": ""
   }
@@ -464,13 +469,24 @@ window.CV = {
 window.PRODUCOES = [
   {
     "categoria": "profissional",
+    "titulo": "CIDURBData - Plataforma de Dados Geoespaciais para o Governo de São Paulo",
+    "tituloEN": "CIDURBData – Geospatial Data Platform for the São Paulo State Government",
+    "subtitulo": "FIPE - CDHU",
+    "periodo": "2026 - 2026",
+    "descricao": "Assistente de Pesquisa em Mobilidade Urbana para implantação do CIDURBData, desenvolvendo indicadores geoespaciais para apoio a tomada de decisão",
+    "descricaoEN": "Research Assistant in Urban Mobility, contributing to the implementation of CIDURBData and the development of geospatial indicators to support decision-making.",
+    "link": null,
+    "arquivo": null
+  },
+  {
+    "categoria": "profissional",
     "titulo": "BikeApp! — Incentivo ao Uso de Bicicletas",
     "tituloEN": "BikeApp! — Bicycle Use Incentive Program",
-    "subtitulo": "Prefeitura de Itapecerica da Serra · Fortaleza, CE",
+    "subtitulo": "Prefeitura Municipal de Fortaleza/CE",
     "periodo": "2025–2026",
-    "descricao": "Desafio Mobilidade Cidadã - Prefeitura Municipal de Fortaleza/CE",
-    "descricaoEN": "Technical Analyst.",
-    "link": null,
+    "descricao": "Solução inovadora de mobilidade urbana selecionada pelo Desafio Mobilidade Cidadã (WRI Brasil)\nAplicativo que remunera o ciclista urbano e incentiva a adoção de mobilidades ativas pela população cearense\nFinalista do Prêmio Plínio Assmann de Boas Práticas em Mobilidade Urbana de 2026",
+    "descricaoEN": "Innovative urban mobility solution selected by the Citizen Mobility Challenge (WRI Brazil)\nAn app that rewards urban cyclists and encourages the adoption of active mobility among the population of Ceará, Brazil.\nFinalist for the 2026 Plínio Assmann Award for Best Practices in Urban Mobility.",
+    "link": "https://bikeapp.poloplanejamento.com/",
     "arquivo": null
   },
   {
@@ -479,8 +495,8 @@ window.PRODUCOES = [
     "tituloEN": "Itapecerica da Serra Mobility Plan",
     "subtitulo": "Prefeitura de Itapecerica da Serra",
     "periodo": "2025–2026",
-    "descricao": "Analista Técnico.",
-    "descricaoEN": "Technical Analyst.",
+    "descricao": "Analista Técnico no Plano de Mobilidade de Itapecerica da Serra. Atuação na elaboração do Plano de Mobilidade Urbana, incluindo análises e diagnósticos territoriais e de mobilidade para subsidiar a formulação de diretrizes e propostas de intervenção.",
+    "descricaoEN": "Technical Analyst – Vargem Grande Paulista Mobility Plan. Contributed to the development of the Urban Mobility Plan, conducting territorial and mobility assessments to inform the formulation of planning guidelines and intervention proposals.",
     "link": null,
     "arquivo": null
   },
@@ -490,9 +506,20 @@ window.PRODUCOES = [
     "tituloEN": "Vargem Grande Paulista Mobility Plan",
     "subtitulo": "Prefeitura de Vargem Grande Paulista",
     "periodo": "2025–2026",
-    "descricao": "Analista Técnico.",
-    "descricaoEN": "Technical Analyst.",
+    "descricao": "Analista Técnico no Plano de Mobilidade de Vargem Grande Paulista. Atuação na elaboração do Plano de Mobilidade Urbana, com desenvolvimento de análises técnicas e diagnósticos territoriais voltados à identificação de desafios e potencialidades da mobilidade municipal e à formulação de propostas para seu aprimoramento.",
+    "descricaoEN": "Technical Analyst – Itapecerica da Serra Mobility Plan. Contributed to the development of the Urban Mobility Plan through technical analyses and territorial assessments aimed at identifying local mobility challenges and opportunities and formulating proposals for improvement.",
     "link": null,
+    "arquivo": null
+  },
+  {
+    "categoria": "profissional",
+    "titulo": "ECHOES OF CARE: Indigenous Well-Being and the Future of the Amazon",
+    "tituloEN": "ECHOES OF CARE: Indigenous Well-Being and the Future of the Amazon",
+    "subtitulo": "The Caring Family Foundation",
+    "periodo": "2024 - 2025",
+    "descricao": "Consultor em Impacto Territorial. Elaboração dos dossiês técnicos Echoes of Care, voltados para avaliação e divulgação dos impactos territoriais das iniciativas de sustentabilidade e promoção da saúde indígena desenvolvidas pela The Caring Family Foundation.",
+    "descricaoEN": "Territorial Impact Consultant. Developed the Echoes of Care technical reports, focused on assessing and communicating the territorial impacts of sustainability and Indigenous health promotion initiatives carried out by The Caring Family Foundation.",
+    "link": "https://thecaringfamilyfoundation.org/our-impact/",
     "arquivo": null
   },
   {
@@ -501,9 +528,9 @@ window.PRODUCOES = [
     "tituloEN": "Heliópolis Collaborative Territorial Diagnosis",
     "subtitulo": "União de Núcleos e Associações dos Moradores de Heliópolis e Região",
     "periodo": "2025",
-    "descricao": "Consultor em Planejamento Territorial.",
-    "descricaoEN": "Territorial Planning Consultant.",
-    "link": null,
+    "descricao": "Educador Social e Consultor em Planejamento para os cadernos de Moradia, Infraestrutura e Meio Ambiente; Mobilidade Urbana; e Emprego e Renda do Diagnóstico Colaborativo Territorial de Heliópiois",
+    "descricaoEN": "Social Educator and Territorial Planning Consultant. Contributed to the development of thematic reports on Housing, Infrastructure and Environment; Urban Mobility; and Employment and Income as part of the Collaborative Territorial Assessment of Heliópolis.",
+    "link": "https://zenodo.org/records/19487900",
     "arquivo": null
   },
   {
@@ -512,8 +539,8 @@ window.PRODUCOES = [
     "tituloEN": "Jardim Pantanal Just Adaptation and Climate Resilience Plan",
     "subtitulo": "Instituto Alana",
     "periodo": "2024",
-    "descricao": "Consultor em Planejamento Territorial.",
-    "descricaoEN": "Territorial Planning Consultant.",
+    "descricao": "Consultor em Planejamento Territorial, atuando no diagnóstico e definição de ações do Plano de Adaptação Justa e Resiliência Climática do Jardim Pantanal - favela na zona leste de São Paulo. ",
+    "descricaoEN": "Territorial Planning Consultant. Contributed to territorial assessments and the development of actions for the Jardim Pantanal Just Adaptation and Climate Resilience Plan, focusing on a low-income informal settlement in the eastern part of São Paulo.",
     "link": null,
     "arquivo": null
   },
@@ -541,17 +568,6 @@ window.PRODUCOES = [
   },
   {
     "categoria": "academica",
-    "titulo": "Reconversão Industrial e a Economia do Grande ABC",
-    "tituloEN": "Industrial Reconversion and the Greater ABC Economy",
-    "subtitulo": "Boletim de Conjuntura Econômica do Grande ABC (CORECON)",
-    "periodo": "07/2022",
-    "descricao": "Texto publicado no Boletim de Conjuntura do Corecon-ABC sobre análise da reconversão industrial e das cadeias produtivas instaladas na região do Grande ABC.",
-    "descricaoEN": "Article published in Corecon-ABC's Economic Outlook Bulletin analyzing industrial reconversion and the productive chains established in the Greater ABC region.",
-    "link": null,
-    "arquivo": "arquivos/Tcc-bch.pdf"
-  },
-  {
-    "categoria": "academica",
     "titulo": "Diagnóstico Urbanístico-Ambiental do Município de Santos/SP",
     "tituloEN": "Urban-Environmental Diagnosis of the Municipality of Santos, SP",
     "subtitulo": "Trabalho acadêmico",
@@ -571,6 +587,17 @@ window.PRODUCOES = [
     "descricaoEN": "Infographic on gentrification produced for an academic outreach project.",
     "link": null,
     "arquivo": null
+  },
+  {
+    "categoria": "academica",
+    "titulo": "Reconversão Industrial e a Economia do Grande ABC",
+    "tituloEN": "Industrial Reconversion and the Greater ABC Economy",
+    "subtitulo": "Boletim de Conjuntura Econômica do Grande ABC (CORECON)",
+    "periodo": "07/2022",
+    "descricao": "Texto publicado no Boletim de Conjuntura do Corecon-ABC sobre análise da reconversão industrial e das cadeias produtivas instaladas na região do Grande ABC.",
+    "descricaoEN": "Article published in Corecon-ABC's Economic Outlook Bulletin analyzing industrial reconversion and the productive chains established in the Greater ABC region.",
+    "link": null,
+    "arquivo": "arquivos/Tcc-bch.pdf"
   },
   {
     "categoria": "academica",
@@ -604,10 +631,31 @@ window.PRODUCOES = [
     "descricaoEN": "Urban analysis of the Jardim Calux neighborhood, in São Bernardo do Campo.",
     "link": null,
     "arquivo": null
+  },
+  {
+    "categoria": "escrita",
+    "titulo": "Professor Voluntário de Geografia",
+    "tituloEN": "Volunteer Teacher – Popular Preparatory Course",
+    "subtitulo": "EPUFABC e Cursinho Colméia",
+    "periodo": "2021 - 2025",
+    "descricao": "Professor  Voluntário no Cursinho Popular, ministrando aulas de geografia física na Escola Preparatória da UFABC e no Cursinho Popular Colméia",
+    "descricaoEN": "Teaching physical geography at UFABC's Preparatory School and the Colmeia Popular Preparatory Course.",
+    "link": null,
+    "arquivo": null
   }
 ];
 
 window.PUBLICACOES = [
+  {
+    "tag": "Anais de Evento · 2026",
+    "tagEN": "Proceedings · 2026",
+    "texto": "<strong>FONTOURA, D. A..</strong>— DINÂMICAS ECONÔMICAS E A DIVISÃO TERRITORIAL DO TRABALHO NA BACIA DE CAMPOS. In: VIII SEDRES: Seminário de Desenvolvimento Regional, Estado e Sociedade, 2026, Marabá."
+  },
+  {
+    "tag": "Anais de Evento · 2025",
+    "tagEN": "Proceedings · 2025",
+    "texto": "<strong>FONTOURA, D. A.; LOMBARDI, T. T. N.</strong> — TRANSFORMAÇÕES NA MANCHA URBANA DA BACIA DE CAMPOS: EFEITOS DO COMPLEXO PRODUTIVO LOCAL NA INTEGRAÇÃO REGIONAL. In: XXI Encontro Nacional da Associação Nacional de Pós-Graduação e Pesquisa em Planejamento Urbano e Regional, 2025, Curitiba"
+  },
   {
     "tag": "Anais de evento · 2024",
     "tagEN": "Conference proceedings · 2024",
